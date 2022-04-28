@@ -1,3 +1,7 @@
+/* This Arduino script enables a kiwi function drive system that is moderated by closed loop control using a BNO055 accelerometer. 
+It enables the robot to always reorient itself to a set absolute orientation value. 
+This was used as a proof-of-concept to show the goal-seeking ability of the robot using PID control. */
+
 //Libraries
 #include <Wire.h>
 #include <Servo.h>
