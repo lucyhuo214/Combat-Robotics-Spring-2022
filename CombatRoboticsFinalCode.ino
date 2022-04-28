@@ -1,3 +1,6 @@
+/* This Arduino script includes the final integrated code for the combat robot. 
+It enables a kiwi function drive system that is moderated by closed loop PID control using a BNO055 accelerometer. */
+
 //Libraries
 #include <Wire.h>
 #include <Servo.h>
