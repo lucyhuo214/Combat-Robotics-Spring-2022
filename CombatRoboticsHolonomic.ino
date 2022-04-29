@@ -1,5 +1,5 @@
 /* This Arduino script implements a holonomic drive system using kiwi drive.
-This was an early version of the drive system code without IMU feedback. */
+This was an early version of the script to test kiwi drive functionality without IMU feedback. */
 
 //Libraries
 #include <Wire.h>
