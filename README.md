@@ -24,4 +24,4 @@ The robot utilizes PID control, also known as Proportional, Integral, and Deriva
 
 The CombatRoboticsSelfOrienting.ino script is a proof-of-concept demonstrating the ability of the robot to use PID closed loop control. The script enables the robot to always face a set absolute orientation, self correcting towards this setpoint using applications of PID control theory.
 
-Finally, the CombatRoboticsFinal.ino script includes the final iteration of software control for the combat robot. It moderates the robot's holonomic drive system using PID control, while still allowing the robot driver to move and rotate in all directions in the XY-plane as desired.
+Finally, the CombatRoboticsFinalCode.ino script includes the final iteration of software control for the combat robot. It moderates the robot's holonomic drive system using PID control, while still allowing the robot driver to move and rotate in all directions in the XY-plane as desired.
