@@ -11,6 +11,8 @@ The final combat robot moves using a holonomic drive system. Holonomic drive is 
 
 The robot uses a kiwi drive system to accomplish this, which is a form of holonomic drive that uses three omni wheels placed 120 degrees apart. Omni wheels have small rollers that are perpendicular to the direction of rotation for a wheel, allowing the wheel to roll sideways along with going forward and backwards. Omni wheels are also able to move laterally,  giving the robot full range of motion in any direction.
 
+The CombatRoboticsHolonomic.ino script includes the robot's implementation of a holonomic drive system using kiwi drive.
+
 # PID Closed Loop Control System
 The greatest challenge that arose while implementing kiwi drive was that the robot would veer off in undesired directions due to various internal or external factors. These might include slight variations in motor performance or uneven friction within the combat arena. In most kiwi drive systems, encoders are placed on each of the three wheels to correct misalignment. However, this robot used feedback from an IMU sensor to detect and correct these misalignments without the use of any encoders.
 
@@ -19,3 +21,7 @@ The self-correcting control is implemented using the BNO055 accelerometer sensor
 The self-oriented control system is implemented using a form of closed loop control, in which portions of the output signal are used as input to the system to reduce errors or achieve system stability. For this project, the output was the yaw value from the BNO055, which was then used as an input to the kiwi drive calculations to ensure a more stable holonomic drive system.
 
 The robot utilizes PID control, also known as Proportional, Integral, and Derivative control, to achieve this function. The proportional control adjusts the output in proportion to the error measured. The derivative control limits the overshoot of the proportional adjustment, helping the robot converge on its goal orientation faster. Finally, the integral is normally used to reduce static error in a system, but was not implemented in this project because it was negligible while in combat.
+
+The CombatRoboticsSelfOrienting.ino script is a proof-of-concept demonstrating the ability of the robot to use PID closed loop control. The script enables the robot to always face a set absolute orientation, self correcting towards this setpoint using applications of PID control theory.
+
+Finally, the CombatRoboticsFinal.ino script includes the final iteration of software control for the combat robot. It moderates the robot's holonomic drive system using PID control, while still allowing the robot driver to move and rotate in all directions in the XY-plane as desired.
